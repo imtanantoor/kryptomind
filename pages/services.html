@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kryptomind | Services</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <script src="../functions.js"></script>
+    </head>
+    <body class="">
+        <header class="bg-primary">
+            <!-- Navbar Starts Here! -->
+            <div class="pt-5 lg:flex xl:flex container mx-auto justify-between">
+                <div class=" items-center flex justify-between lg:justify-start xl:justify-start">
+                    <div onclick="window.location='../index.html'">
+                        <img class="h-30 w-40" src="../assets/images/logo.png" />
+                    </div>
+                    <div id="mainNav" class="hidden lg:flex xl:flex">
+                      <ul class="lg:flex xl:flex items-center">
+                          <li class="lg:ml-10 xl:ml-10 text-white mr-5 ml-5 text-sm"><a href="./services.html">Services</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="./ourwork.html">Portfolio</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="./careers.html">Careers</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="./about-us.html">About Us</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
+                          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                              <path  style="color: white;" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                          </svg>
+                      </button>
+                  </div>
+      
+                  
+                </div>
+                 <div class="hidden lg:flex xl:flex items-center">
+                    <img class="h-5 w-5" src="/assets/images/phone-call.png">
+                    <p class="text-sm text-white ml-2">+92 042 35929454</p>
+                    <button style="background-color: #0E142B;" class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
+                </div>
+                <div id="navBar" style="background-color: #0E80A1;" class="p-2 w-full absolute hidden lg:hidden xl:hidden mt-5">
+                  <ul class="lg:flex xl:flex items-center">
+                      <li class="text-white text-sm py-2"><a href="./services.html">Services</a></li>
+                      <li class="text-white text-sm py-2"><a href="./ourwork.html">Portfolio</a></li>
+                      <li class="text-white text-sm py-2"><a href="./careers.html">Careers</a></li>
+                      <li class="text-white text-sm py-2"><a href="./about-us.html">About Us</a></li>
+                  </ul>
+                </div>
+            </div>
+            <!-- Navbar Ends Here & Main Page Featured Area Starts here! -->
+            <div class="w-full  flex items-center">
+                <div class="w-4/5 container mt-20 mx-auto">
+                    <p class="text-3xl md:text-5xl font-bold text-white text-center">What We Do?</p>
+                    <div class="flex pt-4 pb-8 w-full justify-around">
+                        <p class="text-xs md:text-lg text-white-80 lg:leading-8 xl:leading-8 text-center w-full lg:w-4/5 xl:w-4/5">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="w-full flex justify-around">
+                        <a href="./ourwork.html">
+                            <button class="rounded-full shadow-lg bg-orange py-2 px-8 md:px-10 text-xs md:text-sm text-white font-bold focus:outline-none">
+                                Check Our Portfolio
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="w-full bg-gray">
+            <div class="w-4/5 container pt-6 mx-auto">
+                <div class="w-full block lg:flex xl:flex">
+                    <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                        <div class="w-full mb-8 shadow-lg py-5 pt-6 bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                            <div class="w-full border-b border-gray-300">
+                                <img class="w-12 pt-2 md:w-auto mx-auto" src="../assets//images/blockchain.png" />
+                                <p class="text-orange text-sm md:text-lg my-4 text-center">BLOCKCHAIN</p>
+                            </div>
+                            <div class="mr-2 ml-2 mx-auto">
+                                <p class="text-center text-gray mt-4 mb-2 text-sm md:text-base font-bold ">How We Can Help?</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Cryptocurrencies Exchange Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Cryptocurrency Wallet Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">New Cryptocurrency Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Private Blockchain Development</p>
+                            </div>
+                        </div>
+                        <div class="w-full mb-8 shadow-lg py-5 bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
+                            <div class="w-full border-b border-gray-300">
+                                <img class="w-12 pt-3 md:w-auto mx-auto" src="../assets//images/monitor.png" />
+                                <p class="text-orange text-sm md:text-lg my-4 text-center">DIGITAL INDUSTRY</p>
+                            </div>
+                            <div>
+                                <p class="text-center text-gray mt-4 mb-2 text-sm md:text-base font-bold ">How We Can Help?</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Mobile Application Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Full Stack Web Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Desktop Application Development</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">QA & Testing</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">UI/UX Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                        <div class="w-full mb-8 shadow-lg py-5 bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                            <div class="w-full border-b border-gray-300">
+                                <img class="pt-2 w-12 md:w-auto mx-auto" src="../assets//images/person.png" />
+                                <p class="text-orange text-sm md:text-lg my-4 text-center">CONSULTING</p>
+                            </div>
+                            <div>
+                                <p class="text-center text-gray mt-4 mb-2 text-sm md:text-base font-bold ">How We Can Help?</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Blockchain Business Analysis</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Proof Of Concept Services</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">IT Consulting</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">System & Hardware Consulting</p>
+                            </div>
+                        </div>
+                        <div class="w-full mb-8 shadow-lg py-5 bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                            <div class="w-full border-b border-gray-300">
+                                <img class="w-12 pt-3 md:w-auto mx-auto" src="../assets//images/trust.png" />
+                                <p class="text-orange text-sm md:text-lg my-4 text-center">IT SECURITY</p>
+                            </div>
+                            <div>
+                                <p class="text-center text-gray mt-4 mb-2 text-sm md:text-base font-bold ">How We Can Help?</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Vulnerability Assessment</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Penetration Testing</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Wireless Security</p>
+                                <p class="text-xs leading-8 mt-1 md:text-sm leading-6 text-gray text-center">Network Security Audits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-blue-gradient">
+            <div class="w-4/5 container py-6 mx-auto">
+                <p class="text-white text-2xl font-bold text-center">Our Verticals</p>
+                <div class="flex w-full py-4 justify-around">
+                    <p class="text-sm text-white-70 leading-loose text-center w-full lg:w-2/3 xl:w-2/3">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                </div>
+                <div class="block p-5">
+                    <div class="w-full block lg:flex xl:flex">
+                        <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                            <div class="w-full pr-0 pl-0 pb-4 md:pl-2 md:pr-2 lg:pl-2 lg:pr-2 xl:pl-2 xl:pr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Finance
+                                </button>
+                            </div>
+                            <div class="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-0 pr-0 pb-4 md:pl-2 md:pr-2 lg:pl-2 lg:pr-2 xl:pl-2 xl:pr-2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Healthcare
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                            <div class="w-full pr-0 pl-0 pb-4 md:pl-2 md:pr-2 lg:pr-2 lg:pl-2 xl:pr-2 xl:pl-2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Education
+                                </button>
+                            </div>
+                            <div class="w-full pl-0 pr-0 pb-4 md:pl-2 md:pr-2 lg:pr-2 lg:pl-2 xl:pr-2 xl:pl-2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Government
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full block lg:flex xl:flex">
+                        <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                            <div class="w-full pr-0 pl-0 pb-4 md:pl-2 md:pr-2 lg:pl-2 lg:pr-2 xl:pl-2 xl:pr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Media
+                                </button>
+                            </div>
+                            <div class="w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-0 pr-0 pb-4 md:pl-2 md:pr-2 lg:pl-2 lg:pr-2 xl:pl-2 xl:pr-2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Publications
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                            <div class="w-full pr-0 pl-0 pb-4 md:pl-2 md:pr-2 lg:pr-2 lg:pl-2 xl:pr-2 xl:pl-2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Real Estate
+                                </button>
+                            </div>
+                            <div class="w-full pl-0 pr-0 pb-4 md:pl-2 md:pr-2 lg:pr-2 lg:pl-2 xl:pr-2 xl:pl-2 lg:w-1/2 xl:w-1/2">
+                                <button class="w-full rounded bg-blue py-3 px-8 text-white text-xs md:text-sm font-bold focus:outline-none">
+                                    Supply Chain
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Us Banner -->
+        <div class="w-5/6 container mx-auto md:w-full lg:w-full xl:w-full pb-20 pt-10 mt-10 lg" style="background-color: rgba(241,146,18,0.2); border-radius: 1rem;">
+            <div class="w-5/6 mx-auto">
+                <p style="color: #F19212; font-family: 'Montserrat-Medium';" class="mt-4 text-xl md:text-2xl lg:text-2xl xl:text-2xl text-center">Contact Us</p>
+                <p style="color: #0E142B; font-family: 'Montserrat-Medium';" class="mt-4 text-2xl md:text-4xl lg:text-4xl xl:text-4xl text-center">Let's create perfect products together.</p>
+                <p style="color:rgba(77,72,71,0.8);" class="mt-5 text-xs md:text-base lg:text-base xl:text-base text-center leading-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                    gubergren.
+                </p>
+                <button onclick="window.location='../pages/proposal_request.html' "  class="block mx-auto py-3 px-10 focus:outline-none text-white text-xs shadow-xl md:text-base lg:text-base xl:text-base mt-10 rounded-full" style="background-color: #F19212; font-family: 'Montserrat-Bold';">Request a Proposal</button>
+            </div>
+        </div>
+
+         <!-- Footer Starts Here! -->
+    <div  class="md:flex justify-between container pt-20 pb-20 w-5/6 mx-auto">
+        <!--Footer Links Data Row-->
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">KryptoMind</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="../pages/about-us.html">About Us</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="../pages/ourwork.html">Portfolio</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="../pages/careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Services</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Block Chain</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Digital Industry</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">IT Security</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Contact</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="../pages/contact-us.html">Contact Us</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="../pages/contact-us.html">Consult</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Social</p>
+          <ul class="text-white mt-2 flex">
+            <img src="/assets/images/linkedin-6.png" class="ml-2" >
+            <img src="/assets/images/facebook-3.png" class="ml-2" >
+            <img src="/assets/images/twitter-6.png" class="ml-2" >
+            <img src="/assets/images/google-plus-3.png" class="ml-2" >
+          </ul>
+        </div>
+
+      </div>
+      <div style="border-color: #0E142B;" class="container md:flex lg:flex xl:flex items-center justify-between border-t mb-5 pt-5 w-5/6 mx-auto">
+        <img src="/assets/images/logo.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
+        <p class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-linkBlue">© 2020 KryptoMind. All Rights Are Reserved</p>
+      </div>
+    </body>
+</html>

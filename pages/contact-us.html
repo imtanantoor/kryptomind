@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../functions.js"></script>
+    <title>Kryptomind | Contact Us</title>
+</head>
+<body class="bg-lightGray">
+    <div class="h-screen">
+        <header class="featured mx-auto"  style="background-image: url('../assets/images/Group 666.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+            <!-- Navbar Starts Here!-->
+            <div style="border-color: #F1F2F6;" class="pt-5 w-5/6 lg:flex xl:flex container mx-auto justify-between">
+                <div class=" items-center flex justify-between lg:justify-start xl:justify-start">
+                    <div onclick="window.location='../index.html'">
+                        <img class="h-30 w-50" src="/assets/images/logo.png" />
+                    </div>
+                    <div id="mainNav" class="hidden lg:flex xl:flex">
+                    <ul class="lg:flex xl:flex items-center">
+                        <li style="color:#0E142B" class="lg:ml-10 xl:ml-10  mr-5 ml-5 text-sm"><a href="./services.html">Services</a></li>
+                        <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./ourwork.html">Portfolio</a></li>
+                        <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./careers.html">Careers</a></li>
+                        <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="about-us.html">About Us</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path  style="color:#0E142B;" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                        </svg>
+                    </button>
+                </div>
+            
+                
+                </div>
+                <div class="hidden lg:flex xl:flex items-center">
+                    <img class="h-5 w-5" src="/assets/images/phone-call.png">
+                    <p style="color: #0E142B;" class="text-sm ml-2">+92 042 35929454</p>
+                    <button onclick="window.location='./contact-us.html'" style="background-color: #0E142B;" class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
+                </div>
+                <div id="navBar" style="background-color: #0E80A1;" class="m-auto p-2 w-5/6 absolute hidden lg:hidden xl:hidden mt-5">
+                <ul class="lg:flex xl:flex items-center">
+                    <li class="text-white text-sm py-2"><a href="./services.html">Services</a></li>
+                    <li class="text-white text-sm py-2"><a href="./ourwork.html">Portfolio</a></li>
+                    <li class="text-white text-sm py-2"><a href="./careers.html">Careers</a></li>
+                    <li class="text-white text-sm py-2"><a href="./about-us.html">About Us</a></li>
+                </ul>
+                </div>
+            </div>
+            <!--Featured Content-->
+            <div class="container w-5/6 mt-20 mx-auto">
+                <p class="text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-white text-center">Contact Us</p>
+                <p class="md:w-4/6 lg:w-4/6 xl:w-4/6 mx-auto mt-5 text-white-80 text-center text-sm md:text-lg lg:text-lg xl:text-lg leading-loose">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua.
+                </p>
+                <!-- Image Row -->
+                <div class="w-5/6 container mx-auto py-10 lg:flex justify-between">
+                    <div class="lg:mt-0 xl:mt-0 mt-5">
+                        <img src="../assets/images/location-pin-bg.png" class="mx-auto h-20 xl:h-auto">
+                        <p class="text-center text-white text-xl lg:text-2xl xl:text-2xl mt-2 semiBold">Locate Us</p>
+                        <div class="mt-2">
+                            <p class="text-center text-white-60  text-sm xl:text-base">Block K Model Town,</p>
+                            <p class="text-center text-white-60  text-sm xl:text-base">Lahore,Punjab,Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:mt-0 xl:mt-0 mt-5">
+                            <img src="../assets/images/contact-bg.png" class="mx-auto h-20 xl:h-auto">
+                        <p class="text-center text-white text-xl lg:text-2xl xl:text-2xl mt-2 semiBold">Call Us</p>
+                        <div class="mt-2">
+                            <p class="text-center text-white-60  text-sm xl:text-base">+92 042 35929454</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:mt-0 xl:mt-0 mt-5">
+                            <img src="../assets/images/email-bg.png" class="mx-auto h-20 xl:h-auto">
+                        <p class="text-center text-white text-xl lg:text-2xl xl:text-2xl mt-2 semiBold">Email Us</p>
+                        <div class="mt-2">
+                            <p class="text-center text-white-60  text-sm xl:text-base">contact@kryptomind.com</p>
+                        </div>
+                    </div>
+                    <div class="lg:mt-0 xl:mt-0 mt-5">
+                            <img src="../assets/images/career-bg.png" class="mx-auto h-20 xl:h-auto">
+                        <p class="text-center text-white text-xl lg:text-2xl xl:text-2xl mt-2 semiBold">Work For Us</p>
+                        <div class="mt-2">
+                            <p class="text-center text-white-60  text-sm xl:text-base">hr@kryptomind.com</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- Form Starts Here! -->
+        <div class="container mt-10 mx-auto"> 
+            <p class="text-linkBlue text-center text-3xl">Message</p>
+            <div class="w-5/6 mx-auto mt-5">
+                <input type="text" placeholder="Full Name" class="mt-2 mb-2 w-full py-3 px-5 text-sm placeholder:gray-200">
+                <input type="text" placeholder="Email Address" class="mt-2 mb-2 w-full py-3 px-5 text-sm placeholder:gray-200">
+                <textarea style="min-height: 20vh;" placeholder="Type your message here." class="resize-none mt-2 mb-2 block w-full p-5 rounded-lg"></textarea>
+                <button class="bg-darkBlue text-white text-base my-10 rounded-full py-3 px-20 block Bold mx-auto">Submit</button>
+            </div>
+        </div>
+        <!-- Contact Us Banner -->
+        <div class="w-5/6 container mx-auto md:w-full lg:w-full xl:w-full pb-20 pt-10 mt-10 lg" style="background-color: rgba(241,146,18,0.2); border-radius: 1rem;">
+            <div class="w-5/6 mx-auto">
+                <p style="color: #F19212; font-family: 'Montserrat-Medium';" class="mt-4 text-xl md:text-3xl lg:text-3xl xl:text-3xl text-center">Contact Us</p>
+                <p style="color: #0E142B; font-family: 'Montserrat-Medium';" class="mt-4 text-2xl md:text-5xl lg:text-5xl xl:text-5xl text-center">Let's create perfect products together.</p>
+                <p style="color:rgba(77,72,71,0.8);" class="mt-5 text-xs md:text-base lg:text-base xl:text-base text-center leading-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                    gubergren.
+                </p>
+                <button class="block mx-auto py-3 px-10 focus:outline-none text-white text-xs shadow-xl md:text-base lg:text-base xl:text-base mt-10 rounded-full" style="background-color: #F19212; font-family: 'Montserrat-Bold';">Request a Proposal</button>
+            </div>
+        </div>
+        <!-- Footer Starts Here! -->
+    <div class="container md:flex justify-between pt-20 pb-20 w-5/6 mx-auto">
+        <!--Footer Links Data Row-->
+        <div class="w-5/6 mt-5 container md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">KryptoMind</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="./about-us.html">About Us</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="./ourwork.html">Portfolio</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="./careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Services</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Block Chain</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Digital Industry</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">IT Security</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="#">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Contact</p>
+          <ul class="text-white mt-2">
+            <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Contact Us</a></li>
+            <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Consult</a></li>
+          </ul>
+        </div>
+        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Social</p>
+          <ul class="text-white mt-2 flex">
+            <img src="/assets/images/linkedin-6.png" class="ml-2" >
+            <img src="/assets/images/facebook-3.png" class="ml-2" >
+            <img src="/assets/images/twitter-6.png" class="ml-2" >
+            <img src="/assets/images/google-plus-3.png" class="ml-2" >
+          </ul>
+        </div>
+
+      </div>
+      <div style="border-color: #0E142B;" class="container md:flex lg:flex xl:flex items-center justify-between border-t mb-5 pt-5 w-5/6 mx-auto">
+        <img src="/assets/images/logo.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
+        <p class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-linkBlue">© 2020 KryptoMind. All Rights Are Reserved</p>
+      </div>
+    </div>
+</body>
+</html>

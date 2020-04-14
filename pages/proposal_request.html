@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proposal Request</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <script src="index.js"></script>
+    </head>
+    <body class="">
+        <header class="relative bg-primary">
+            <!-- Navbar Starts Here! -->
+            <div class="pt-5 lg:flex xl:flex w-5/6 container mx-auto justify-between">
+                <div class=" items-center flex justify-between lg:justify-start xl:justify-start">
+                    <div onclick="window.location='../index.html'">
+                        <img class="h-30 w-40" src="../assets/images/logo.png" />
+                    </div>
+                    <div id="mainNav" class="hidden lg:flex xl:flex">
+                      <ul class="lg:flex xl:flex items-center">
+                          <li class="lg:ml-10 xl:ml-10 text-white mr-5 ml-5 text-sm"><a href="../pages/services.html">Services</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="../pages/ourwork.html">Portfolio</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="../pages/careers.html">Careers</a></li>
+                          <li class="text-white mr-5 ml-5 text-sm"><a href="../pages/about-us.html">About Us</a></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
+                          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                              <path  style="color: white;" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                          </svg>
+                      </button>
+                  </div>
+      
+                  
+                </div>
+                 <div class="hidden lg:flex xl:flex items-center">
+                    <img class="h-5 w-5" src="../assets/images/phone-call.png">
+                    <p class="text-sm text-white ml-2">+92 042 35929454</p>
+                    <button style="background-color: #0E142B;" class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
+                </div>
+                <div id="navBar" style="background-color: #0E80A1;" class="p-2 w-full absolute hidden lg:hidden xl:hidden mt-5">
+                  <ul class="lg:flex xl:flex items-center">
+                      <li class="text-white text-sm py-2"><a href="../pages/services.html">Services</a></li>
+                      <li class="text-white text-sm py-2"><a href="../pages/ourwork.html">Portfolio</a></li>
+                      <li class="text-white text-sm py-2"><a href="../pages/careers.html">Careers</a></li>
+                      <li class="text-white text-sm py-2"><a href="../pages/about-us.html">About Us</a></li>
+                  </ul>
+                </div>
+            </div>
+        <!-- Navbar Ends Here & Main Page Featured Area Starts here! -->
+        <div class="container w-5/6 mx-auto mt-20">
+            <p class="text-white text-2xl md:text-4xl lg:text-4xl xl:text-4xl">Request A Proposal</p>
+            <div class="mt-5">
+                <p class="mt-1 text-white-70 text-sm md:text-lg lg:text-lg xl:text-lg">Looking for a team you can count on?</p>
+                <p class="mt-1 text-white-70 text-sm md:text-lg lg:text-lg xl:text-lg">You found.</p>
+            </div>
+            <div class="absolute bottom-0 pb-5">
+                <div class="flex">
+                    <img class="h-5 mr-2" src="../assets/images/linkedin-transparent.png">    
+                    <img class="h-5 mr-2" src="../assets/images/facebook-transparent.png">    
+                    <img class="h-5 mr-2" src="../assets/images/twitter-transparent.png">    
+                    <img class="h-5 mr-2" src="../assets/images/google-plus-transparent.png">    
+                </div>
+            </div>
+        </div>
+        </header>
+        <div class="w-full bg-gray pb-16 lg:pb-24 xl:pb-24">
+            <div class="w-4/5 container block lg:flex xl:flex mx-auto">
+                <div class="flex pt-6 lg:pt-0 xl:pt-0 items-center justify-start md:justify-around lg:justify-start xl:justify-start w-full lg:w-2/5 xl:w-2/5">
+                    <div class="w-full md:w-1/2 lg:w-3/4 xl:w-3/2">
+                        <div>
+                            <p class="text-left text-lg font-bold text-blue">What will be the next step?</p>
+                            <p class="text-left text-sm font-bold text-gray">You are one step closer to build your perfect product.</p>
+                        </div>
+                        <div class="flex">
+                            <img class="w-10 h-64 xl:h-56" src="../assets/images/Group 569.png"/>
+                            <div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-bold text-blue">1. We will prepare a proposal.</p>
+                                    <p class="text-xs font-bold text-gray">Required scope, timeline and apr. price will be included if you provide us with detail information about a project</p>
+                                </div>
+                                <div class="mt-6 md:mt-8 lg:mt-4">
+                                    <p class="text-sm font-bold text-blue">2. Together we discuss it.</p>
+                                    <p class="text-xs font-bold text-gray">Let's get acquainted and discuss all the possible variants and options. Google Hangouts or Skype usually works great.</p>
+                                </div>
+                                <div class="mt-6 md:mt-8 lg:mt-4">
+                                    <p class="text-sm font-bold text-blue">3. Let's start building</p>
+                                    <p class="text-xs font-bold text-gray">When the contract is signed, and all goals are set we can start the first sprint.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputForm w-full shadow-xl right-0 rounded-b-lg bg-white mt-6 lg:mt-0 xl:mt-0 lg:w-3/5 xl:w-3/5">
+                    <div class="w-full rounded-t-lg bg-gray">
+                        <div class="md:flex items-center rounded-t-lg py-10 py-6 px-6 md:px-12">
+                            <img class="w-20 md:mb-0 lg:mb-0 xl:mb-0 mb-5 md:mr-5 mx-auto md:mx-0" src="../assets/images/Group 572.png"/>
+                            <p class="text-sm md:text-base leading-loose md:w-4/6 ml-5 text-linkBlue font-bold text-center md:text-left">Write us a few words about your projects and we will prepare a proposal for you within 24 hour.</p>
+                        </div>
+                    </div>
+                    <form class="py-6 px-6 md:px-12" action="" method="post">
+                        <div class="block lg:flex xl:flex">
+                            <input
+                                class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 mb-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                                type="text"
+                                placeholder="Your name"
+                            />
+                            <input
+                                class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 ml-0 mt-2 mb-2 lg:mt-0 xl:mt-0 lg:ml-2 xl:ml-2 rounded w-full focus:outline-none"
+                                type="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+                        <div class="block lg:flex xl:flex">
+                            <input
+                                class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 my-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                                type="text"
+                                placeholder="Your company"
+                            />
+                            <input
+                                class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 ml-0 my-2 lg:ml-2 xl:ml-2 rounded w-full focus:outline-none"
+                                type="text"
+                                placeholder="Apr. budget"
+                            />
+                        </div>
+                        <div class="pt-2 lg:pt-4 xl:pt-4">
+                            <h2 class="my-2 lg:my-3 xl:my-3 text-sm md:text-lg text-gray">Optional</h2>
+                            <textarea
+                                class="bg-gray resize-none text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 my-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                                rows="8"
+                                placeholder="Project detail"
+                            ></textarea>
+                        </div>
+                        <div class="my-2 p-3 rounded bg-gray">
+                            <div style="border-color: rgba(77, 72, 71, 0.7); " class="border-2 border-dashed w-full py-4 pl-3 rounded flex items-center">
+                                <img class="mr-5 h-10 md:h-auto" src="../assets/images/attachement.png" />
+                                <span class="ml-3 text-xxs md:text-xs text-gray-500">DROP YOUR ATTATCHMENTS HERE</span>
+                            </div>
+                        </div>
+                        <button class="w-full semiBold rounded-full bg-black py-2 md:py-3 mt-2 lg:mt-6 xl:mt-6 text-white text-xs md:text-base font-bold focus:outline-none">
+                            Submit
+                        </button>
+                        <p class="mt-6 text-center text-xs md:text-sm text-orange">or contact us at <span class="font-bold">contact@kryptomind.com</span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Footer Starts Here!--> 
+        <div class="zigzag6">  </div>
+        <div class="gradient pb-10">
+        <!--Footer Links Start Here!-->
+        <div  class="container md:flex justify-between pt-20 pb-20 w-5/6 mx-auto">
+            <!--Footer Links Data Row-->
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+            <p style="border-color: rgba(255, 255, 255, 0.2)" class="text-xl text-white border-b-2 pb-2">KryptoMind</p>
+            <ul class="text-white mt-2">
+                <li class="mt-2 text-sm"><a href="../pages/about-us.html">About Us</a></li>
+                <li class="mt-2 text-sm"><a href="../pages/ourwork.html">Portfolio</a></li>
+                <li class="mt-2 text-sm"><a href="../pages/careers.html">Careers</a></li>
+            </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+            <p style="border-color: rgba(255, 255, 255, 0.2);" class="text-xl text-white border-b-2 pb-2">Services</p>
+            <ul class="text-white mt-2">
+                <li class="mt-2 text-sm"><a href="#">Block Chain</a></li>
+                <li class="mt-2 text-sm"><a href="#">Digital Industry</a></li>
+                <li class="mt-2 text-sm"><a href="#">IT Security</a></li>
+                <li class="mt-2 text-sm"><a href="#">Consulting</a></li>
+            </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+            <p style="border-color: rgba(255, 255, 255, 0.2);" class="text-xl text-white border-b-2 pb-2">Contact</p>
+            <ul class="text-white mt-2">
+                <li class="mt-2 text-sm"><a href="../pages/contact-us.html">Contact Us</a></li>
+                <li class="mt-2 text-sm"><a href="../pages/contact-us.html">Consult</a></li>
+            </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+            <p style="border-color: rgba(255, 255, 255, 0.2);" class="text-xl text-white border-b-2 pb-2">Social</p>
+            <ul class="text-white mt-2 flex">
+                <img src="/assets/images/linkedin.png" class="ml-2" >
+                <img src="/assets/images/facebook.png" class="ml-2" >
+                <img src="/assets/images/twitter.png" class="ml-2" >
+                <img src="/assets/images/google-plus.png" class="ml-2" >
+            </ul>
+            </div>
+
+        </div>
+        <div style="border-color: rgba(255, 255, 255, 0.2);" class="container md:flex lg:flex xl:flex items-center justify-between border-t-2 pt-5 w-5/6 mx-auto">
+            <img src="../assets/images/logo-footer.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
+            <p class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-white">© 2020 KryptoMind. All Rights Are Reserved</p>
+        </div>
+        </div>
+    </body>
+</html>

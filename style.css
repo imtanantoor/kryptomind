@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.zigzag {
+  width: 100%;
+  top: -20;
+  height: 20%;
+  color: #f1f2f6;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,
+      #f1f2f6 33.3%,
+      #f1f2f6 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      #f1f2f6 33.3%,
+      #f1f2f6 66.6%,
+      transparent 66.66%
+    );
+  background-size: 50px 100px;
+  /* background-size: 55px 110px; */
+  transform: rotateX(180deg);
+}
+.zigzag2 {
+  width: 100%;
+  position: absolute;
+  margin-top: -14vh;
+  z-index: 1;
+  height: 20%;
+  color: white;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    );
+  background-size: 52px 100px;
+  /* background-size: 55px 110px; */
+  transform: rotateX(180deg);
+}
+.zigzag3 {
+  width: 100%;
+  position: absolute;
+  margin-top: -4vh;
+  height: 5%;
+  color: white;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    );
+  background-size: 52px 100px;
+  /* background-size: 55px 110px; */
+}
+.zigzag4 {
+  width: 100%;
+  position: absolute;
+  margin-top: -2vh;
+  height: 5%;
+  color: white;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      white 33.3%,
+      white 66.6%,
+      transparent 66.66%
+    );
+  background-size: 52px 100px;
+  transform: rotateX(180deg);
+  /* background-size: 55px 110px; */
+}
+.zigzag5 {
+  width: 100%;
+  position: absolute;
+  margin-top: -4vh;
+  height: 5%;
+  color: #F1F2F6;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,
+      #F1F2F6 33.3%,
+      #F1F2F6 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      #F1F2F6 33.3%,
+      #F1F2F6 66.6%,
+      transparent 66.66%
+    );
+  background-size: 52px 100px;
+  /* background-size: 55px 110px; */
+}
+.zigzag6 {
+  width: 100%;
+  position: absolute;
+  margin-top: -2vh;
+  height: 5%;
+  color: #f1f2f6;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.3%,#f1f2f6 33.3%,
+      #f1f2f6 66.6%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.3%,
+      #f1f2f6 33.3%,
+      #f1f2f6 66.6%,
+      transparent 66.66%
+    );
+  background-size: 52px 100px;
+  transform: rotateX(180deg);
+  /* background-size: 55px 110px; */
+}
+.gradient {
+  background-image: linear-gradient(to bottom, #034078, #082e59, #0d1a35);
+}
+.cardRow{
+    width:80%;
+    margin: 0 auto;
+}
+.teamInfo {
+  position: relative;
+  top: 65%;
+}
+/* Our Work Page CSS */
+
+.onhover{
+  display: none;
+  height:-webkit-fill-available;
+  background-image: linear-gradient(to bottom ,rgba(18,130,162,0.7),rgba(3,64,120,1));
+}
+.projectHover:hover > .onhover {
+  display: block;
+}
+/* Colors Classes */
+.text-linkBlue{
+  color: #0E142B;
+}
+.text-white-50{
+  color: rgba(255, 255, 255, 0.5);
+}
+.text-white-60{
+  color: rgba(255, 255, 255, 0.6);
+}
+.text-white-70{
+  color: rgba(255, 255, 255, 0.7);
+}
+.text-white-80{
+  color: rgba(255, 255, 255, 0.8);
+}
+.text-orange{
+  color: #F19212;
+}
+/* Font Classes */
+.semiBold{
+  font-family: 'Montserrat-SemiBold';
+}
+.text-blue {
+  color: rgb(9, 65, 118);
+}
+
+.text-gray {
+  color: rgb(77, 72, 71);
+}
+.text-xxs {
+  font-size: 0.6rem;
+}
+.Bold{
+  font-family: 'Montserrat-Bold';
+}
+/* Utility Classes */
+.bg-lightGray{
+  background-color: #F1F2F6;
+}
+.bg-darkBlue{
+  background-color: #0E142B;
+}
+.bg-semidarkBlue{
+  background-color: #034078;
+}
+.bg-primary {
+  background-image: url('./assets/images/Group 694.png'); background-repeat: no-repeat; background-position: top; background-size: cover; padding:0 0 20vh 0 ; 
+}
+
+.bg-gray {
+  background-color: rgb(241, 242, 246);
+}
+
+.bg-black {
+  background-color: rgb(14, 21, 42);
+}
+
+.bg-white {
+  background-color: rgb(256, 256, 256);
+}
+
+.bg-pale {
+  background-color: rgb(241, 232, 225);
+}
+
+.bg-orange {
+  background-color: rgb(249, 142, 45)
+}
+
+.bg-blue-gradient {
+  background-image: linear-gradient(to bottom, rgba(9, 65, 117), rgba(14, 21, 43));
+}
+
+.bg-blue {
+  background-color: rgb(9, 65, 118)
+}
+
+.leading-medium{
+  line-height: 2.7rem;
+}
+.leading-extra{
+  line-height: 3rem;
+}
+.customrightMargin{
+  margin-right: 5vh;
+}
+.sliderButton{
+  display: none;
+}
+
+/* Media Queries index page */
+@media only screen and (max-width:986px){
+    .zigzag4{
+        margin-top: 9vh!important;
+    }
+}
+@media only screen and (min-width: 1024px) {
+  .cardRow {
+    bottom: 100% !important;
+  }
+  .cardLeft {
+    margin-right: 5vh!important;
+  }
+  .sliderButton{
+    display: block;
+  }
+  .inputForm{
+    margin-top: -17.8vh;
+    z-index: 2;
+    border-top-left-radius: 10vh;
+    border-top-right-radius: 10vh;
+  }
+}
+@media only screen and(max-width: 1024px) {
+  .zigzag2 {
+    margin-top: -14vh;
+  }
+  
+}
+@media only screen and (max-width:755px){
+    .dotBorder{
+        display: none;
+    }
+    .ourMissionBlockImage{
+      display: block !important;
+    }
+    .ourMissionFlexImage{
+      display: none !important;
+    }
+    .bg-primary{
+      padding-bottom: 10vh!important;
+    }
+   
+}
+@media only screen and (max-width:987px){
+    .gradient{
+        margin-top:10vh !important;
+        padding-top: 50px !important;
+        z-index: -1;
+    }
+}
+@media screen and (min-width: 1000px) and (max-height: 600px) {
+  .featured {
+    padding-bottom: 20vh !important;
+  }
+}
+@media screen and (max-width: 425px) and (max-height: 600px) {
+  .featured {
+    padding-bottom: 5vh !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cardRow {
+    width: 100%;
+    position: relative;
+    bottom: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cardContainer {
+    max-width: 800px !important;
+  }
+}
