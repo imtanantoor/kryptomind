@@ -17,10 +17,72 @@
     <script src="functions.js"></script>
   </head>
 
-
-  <body>
-  <button style="z-index: 3;" onclick="topFunction()" class="focus:outline-none fixed bottom-0 right-0 rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
-    <header class="featured"  style=" background-image: url('./assets/images/Group 694.png'); background-repeat: no-repeat; background-position: top; background-size: cover;">
+  <body onscroll="scrollFunction()">
+    <!-- Chat Button -->
+    <button onclick="toggleChat()" id="chatButton" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #033058; position: fixed;" class="focus:outline-none flex bottom-0">
+          <img src="./assets/images/chatIcon.png" class="p-3"/>
+          <p style="background-color: #034078; border-top-right-radius:5px;" class="block text-white ml-5 py-4 text-sm p-3">Click Here To Chat</p>
+    </button>
+    <div id="chatContainer" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #034078; position: fixed;" class="focus:outline-none shadow-lg bottom-0">
+      <div class="py-3 flex mx-auto justify-between w-5/6 text-center items-center px-2">
+        <p class="text-white-50 md:ml-20 text-xs md:text-sm">How I may help you?</p>
+        <div class="flex">
+          <button class="h-10 focus:outline-none">
+            <img src="./assets/images/chatArrow.png" class="mr-2" >
+          </button>
+          <button onclick="toggleChat()" class="h-10 focus:outline-none">
+            <img src="./assets/images/chatMinimize.png" class="h-1 w-4">
+          </button>
+        </div>
+      </div>
+      <!-- Chat Box Body -->
+      <div  class="pb-4" style="background-color: #F1F2F6;">
+          <div class="absolute bg-white rounded-lg flex ml-2 shadow-md">
+            <img  style="margin-top:-1.2rem; height: 4.5rem;" src="./assets/images/chatLogo.png" class="bg-white p-2 rounded-lg"/>
+          </div>
+          <div class="w-full border-b pb-4 bg-white shadow-sm">
+            <div class="w-5/6 mx-auto">
+              <div class="w-5/6 pl-10 ml-10 md:ml-5 xl:ml-6 mx-auto">
+                <p>Kryptomind Support</p>
+                <p style="color: #F19212; font-family: Montserrat-Medium;" class="text-xs mt-1">24/7 Support</p>
+              </div>
+            </div>
+          </div>
+          <!-- Customer Row -->
+          <div class="flex px-2 border-b items-center bg-white pb-4 shadow-sm">
+            <div class="bg-white p-3 rounded-lg shadow-md ml-2">
+              <img src="./assets/images/chatCustomerIcon.png"/>
+            </div>
+            <div class="w-5/6 pl-1 md:pl-0 ml-10 mt-2 text-sm text-left">
+              <p  style="font-family: Montserrat-Medium; color: #F19212;">You</p>
+              <p class="text-xs" style="color: #4D4847; font-weight: lighter;">Consetetur sadipscing elitr, sed diam?</p>
+            </div>
+          </div>
+          <!-- CSR Row -->
+          <div class="flex px-2 items-center bg-white pb-6 shadow-sm">
+            <!-- <div class="bg-white p-3 rounded-lg shadow-md ml-2"> -->
+              <img class="ml-1 rounded-lg" src="./assets/images/CSR.png"/>
+            <!-- </div> -->
+            <div class="w-5/6 mt-2 ml-10 text-sm text-left">
+              <p>Jhon Doe</p>
+              <p class="text-xs" style="color: #4D4847; font-weight: lighter;">lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+            </div>
+          </div>
+          <textarea rows="4" class="focus:outline-none mt-4 p-4 resize-none w-5/6 block text-xs mx-auto rounded-lg" placeholder="Type your message here"></textarea>
+      </div>
+    </div>
+    <!-- Cookie Banner -->
+    <div id="cookie" style="background-color: rgba(0,0,0,0.8); z-index: 3;" class="w-full py-4 bottom-0 fixed">
+      <div class="md:flex px-5 md:px-0 xl:px-0 justify-between container mx-auto items-center">
+        <p  class="text-white-70 text-xs xl:text-sm md:text-sm">By continuing your visit to this site, you accept the use of cookies from Google Anylytics so we can improve the site for you. <span style="color: #C27814;">Read More.</span></p>
+        <div class="mt-2 ml-10 md:ml-0 md:mt-0">
+          <button onclick="cookieBanner()" style="background-color: #F19212;" class="px-8 py-3 text-sm text-white rounded-full">Accept</button>
+          <button class="text-white rounded-full text-sm underline mt-1 ml-4">Reject</button>
+        </div>
+      </div>
+    </div>
+    <button id="back2Top" style="z-index: 3; bottom:10%; right:5%;" onclick="topFunction()" class="focus:outline-none fixed rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
+    <header class="featured h-screen"  style=" background-image: url('./assets/images/Group 470.png'); background-repeat: no-repeat; background-position: top; background-size: cover;">
       <!-- Navbar Starts Here! -->
       <div class="pt-5 lg:flex xl:flex w-5/6 container mx-auto justify-between">
           <div class=" items-center flex justify-between lg:justify-start xl:justify-start">
@@ -42,7 +104,7 @@
                     </svg>
                 </button>
             </div>
-
+    
             
           </div>
            <div class="hidden lg:flex xl:flex items-center">
@@ -59,16 +121,15 @@
             </ul>
           </div>
       </div>
-<!-- Navbar Ends Here & Main Page Featured Area Starts here! -->
-      <div  style="background-image: url('./assets/images/Group 132.png'); background-size: 110vh 58vh; background-position: right; background-repeat: no-repeat; min-height: 60vh;" class="container mx-auto max-w-screen-xl max-h-3/6" >
-        <div class="w-5/6 mx-auto  xl:w-full pt-10 md:pt-10 lg:pt-10 xl:pt-10 py-2">
-          <div class="heroPara md:py-0 lg:py-0 xl:py-0 text-center md:text-center lg:text-left xl:text-left md:pt-10 lg:pt-20 xl:pt-20 md:mx-auto lg:mx-0 md:w-5/6 lg:w-5/6 xl:w-5/6">
-            <p class="md:ml-0 md:mr-0 lg:ml-0 lg:mr-0 xl:ml-0 xl:mr-0 mr-5 ml-5 text-white text-2xl md:text-4xl lg:text-4xl xl:text-4xl ">We Are Defining The Futures Edge.</p>
-            <p class="md:ml-0 md:mr-0 lg:ml-0 lg:mr-0 xl:ml-0 xl:mr-0 mr-5 ml-5 mt-5 text-xs md:text-base lg:text-base xl:text-base text-white-80">lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-            <button class="rounded-full text-xs text-white md:text-sm lg:text-sm xl:text-sm font-bold focus:outline-none uppercase font-bold py-2 px-5 mt-5" style="background-color: #F19212;">get in touch</button>
-          </div>
+    <!-- Navbar Ends Here & Main Page Featured Area Starts here! -->
+      <div style="margin-top: 10%;" class="container mx-auto">
+        <div class="w-4/6 indexPara mx-auto xl:m-0">
+          <p class="text-4xl text-white">We Are Defining The Futures Edge.</p>
+          <p style="font-family: 'Montserrat-Light';" class="text-lg text-white-80">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+          <button class="rounded-full text-xs text-white md:text-sm lg:text-sm xl:text-sm font-bold focus:outline-none uppercase font-bold py-2 px-5 mt-5" style="background-color: #F19212;">get in touch</button>
         </div>
       </div>
+
     </header>
 <!-- Goals Section Start Here! -->
     <div style="background-color: #F1F2F6;" >

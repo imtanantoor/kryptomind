@@ -15,8 +15,63 @@
     <script src="../functions.js"></script>
     <title>Kryptomind | Our Work</title>
 </head>
-<body class="bg-lightGray">
-  <button style="z-index: 3;" onclick="topFunction()" class="focus:outline-none fixed bottom-0 right-0 rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
+<body onscroll="scrollFunction()" class="bg-lightGray">
+    <!-- Chat Module Starts Here! -->
+  <button onclick="toggleChat()" id="chatButton" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #033058; position: fixed;" class="focus:outline-none flex bottom-0">
+    <img src="../assets/images/chatIcon.png" class="p-3"/>
+    <p style="background-color: #034078; border-top-right-radius:5px;" class="block text-white ml-5 py-4 text-sm p-3">Click Here To Chat</p>
+</button>
+<div id="chatContainer" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #034078; position: fixed;" class="focus:outline-none shadow-lg bottom-0">
+<div class="py-3 flex mx-auto justify-between w-5/6 text-center items-center px-2">
+  <p class="text-white-50 md:ml-20 text-xs md:text-sm">How I may help you?</p>
+  <div class="flex">
+    <button class="h-10 focus:outline-none">
+      <img src="../assets/images/chatArrow.png" class="mr-2" >
+    </button>
+    <button onclick="toggleChat()" class="h-10 focus:outline-none">
+      <img src="../assets/images/chatMinimize.png" class="h-1 w-4">
+    </button>
+  </div>
+</div>
+<!-- Chat Box Body -->
+<div  class="pb-4" style="background-color: #F1F2F6;">
+    <div class="absolute bg-white rounded-lg flex ml-2 shadow-md">
+      <img  style="margin-top:-1.2rem; height: 4.5rem;" src="../assets/images/chatLogo.png" class="bg-white p-2 rounded-lg"/>
+    </div>
+    <div class="w-full border-b pb-4 bg-white shadow-sm">
+      <div class="w-5/6 mx-auto">
+        <div class="w-5/6 pl-10 ml-10 md:ml-5 xl:ml-6 mx-auto">
+          <p>Kryptomind Support</p>
+          <p style="color: #F19212; font-family: Montserrat-Medium;" class="text-xs mt-1">24/7 Support</p>
+        </div>
+      </div>
+    </div>
+    <!-- Customer Row -->
+    <div class="flex px-2 border-b items-center bg-white pb-4 shadow-sm">
+      <div class="bg-white p-3 rounded-lg shadow-md ml-2">
+        <img src="../assets/images/chatCustomerIcon.png"/>
+      </div>
+      <div class="w-5/6 pl-1 md:pl-0 ml-10 mt-2 text-sm text-left">
+        <p  style="font-family: Montserrat-Medium; color: #F19212;">You</p>
+        <p class="text-xs" style="color: #4D4847; font-weight: lighter;">Consetetur sadipscing elitr, sed diam?</p>
+      </div>
+    </div>
+    <!-- CSR Row -->
+    <div class="flex px-2 items-center bg-white pb-6 shadow-sm">
+      <!-- <div class="bg-white p-3 rounded-lg shadow-md ml-2"> -->
+        <img class="ml-1 rounded-lg" src="../assets/images/CSR.png"/>
+      <!-- </div> -->
+      <div class="w-5/6 mt-2 ml-10 text-sm text-left">
+        <p>Jhon Doe</p>
+        <p class="text-xs" style="color: #4D4847; font-weight: lighter;">lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+      </div>
+    </div>
+    <textarea rows="4" class="focus:outline-none mt-4 p-4 resize-none w-5/6 block text-xs mx-auto rounded-lg" placeholder="Type your message here"></textarea>
+</div>
+</div>
+<!-- Chat Module Ends Here -->
+<button id="back2Top" style="z-index: 3; bottom:10%; right:5%;" onclick="topFunction()" class="focus:outline-none fixed rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
+  
 
     <!-- Navbar Starts Here!-->
     <div style="border-color: #F1F2F6;" class="pt-5 w-5/6 lg:flex xl:flex container mx-auto justify-between">

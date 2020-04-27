@@ -9,6 +9,15 @@ body {
   margin: 0;
   padding: 0;
 }
+#back2Top{
+  display: none;
+}
+#chatButton{
+  display: flex;
+}
+#chatContainer{
+  display: none;
+}
 .zigzag {
   width: 100%;
   top: -20;
@@ -190,6 +199,9 @@ body {
 .text-orange{
   color: #F19212;
 }
+.grayText:{
+  color:#4D4847;
+}
 /* Font Classes */
 .semiBold{
   font-family: 'Montserrat-SemiBold';
@@ -267,6 +279,11 @@ body {
   border: 2px solid #0E142B;
 }
 /* Media Queries index page */
+@media only screen and (max-width:1440px){
+  .indexPara{
+    margin-left: 3% !important;
+  }
+}
 @media only screen and (max-width:986px){
     .zigzag4{
         margin-top: 9vh!important;
@@ -288,8 +305,11 @@ body {
     border-top-left-radius: 10vh;
     border-top-right-radius: 10vh;
   }
+  #chatContainer {
+    width: 400px;
+  }
 }
-@media only screen and(max-width: 1024px) {
+@media only screen and(max-width: 1025px) {
   .zigzag2 {
     margin-top: -14vh;
   }
@@ -308,7 +328,12 @@ body {
     .bg-primary{
       padding-bottom: 10vh!important;
     }
-   
+    #chatContainer {
+      width: 450px;
+      left:0;
+      right:0;
+      margin: 0 auto;
+    }
 }
 @media only screen and (max-width:786px){
 .heroPara {
@@ -317,12 +342,17 @@ body {
 }
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:426px){
   .heroPara{
   background-color: rgba(0,0,0,0.4);
   padding:10px;
-
   }
+  #chatContainer{
+    width: 350px;
+    right:0;
+    left:0;
+    margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width:987px){
@@ -357,6 +387,7 @@ body {
     padding-left:2.8rem;
     width: 70%;
   }
+  
 }
 @media only screen and (min-width: 1100px) {
   .cardContainer {
