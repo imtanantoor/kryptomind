@@ -319,6 +319,7 @@ body {
     .dotBorder{
         display: none;
     }
+    
     .ourMissionBlockImage{
       display: block !important;
     }
@@ -347,6 +348,7 @@ body {
   background-color: rgba(0,0,0,0.4);
   padding:10px;
   }
+  
   #chatContainer{
     width: 350px;
     right:0;

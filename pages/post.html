@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="../functions.js"></script>
+    <title>Kryptomind | Apply Post</title>
+</head>
+
+<body onscroll="scrollFunction()" class="bg-lightGray">
+    <!-- Chat Module Starts Here! -->
+    <button onclick="toggleChat()" id="chatButton"
+        style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #033058; position: fixed;"
+        class="focus:outline-none flex bottom-0">
+        <img src="../assets/images/chatIcon.png" class="p-3" />
+        <p style="background-color: #034078; border-top-right-radius:5px;"
+            class="block text-white ml-5 py-4 text-sm p-3">Click Here To Chat</p>
+    </button>
+    <div id="chatContainer"
+        style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #034078; position: fixed;"
+        class="focus:outline-none shadow-lg bottom-0">
+        <div class="py-3 flex mx-auto justify-between w-5/6 text-center items-center px-2">
+            <p class="text-white-50 md:ml-20 text-xs md:text-sm">How I may help you?</p>
+            <div class="flex">
+                <button class="h-10 focus:outline-none">
+                    <img src="../assets/images/chatArrow.png" class="mr-2">
+                </button>
+                <button onclick="toggleChat()" class="h-10 focus:outline-none">
+                    <img src="../assets/images/chatMinimize.png" class="h-1 w-4">
+                </button>
+            </div>
+        </div>
+        <!-- Chat Box Body -->
+        <div class="pb-4" style="background-color: #F1F2F6;">
+            <div class="absolute bg-white rounded-lg flex ml-2 shadow-md">
+                <img style="margin-top:-1.2rem; height: 4.5rem;" src="../assets/images/ChatLogo.png"
+                    class="bg-white p-2 rounded-lg" />
+            </div>
+            <div class="w-full border-b pb-4 bg-white shadow-sm">
+                <div class="w-5/6 mx-auto">
+                    <div class="w-5/6 pl-10 ml-10 md:ml-5 xl:ml-6 mx-auto">
+                        <p>Kryptomind Support</p>
+                        <p style="color: #F19212; font-family: Montserrat-Medium;" class="text-xs mt-1">24/7 Support</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Customer Row -->
+            <div class="flex px-2 border-b items-center bg-white pb-4 shadow-sm">
+                <div class="bg-white p-3 rounded-lg shadow-md ml-2">
+                    <img src="../assets/images/chatCustomerIcon.png" />
+                </div>
+                <div class="w-5/6 pl-1 md:pl-0 ml-10 mt-2 text-sm text-left">
+                    <p style="font-family: Montserrat-Medium; color: #F19212;">You</p>
+                    <p class="text-xs" style="color: #4D4847; font-weight: lighter;">Consetetur sadipscing elitr, sed
+                        diam?</p>
+                </div>
+            </div>
+            <!-- CSR Row -->
+            <div class="flex px-2 items-center bg-white pb-6 shadow-sm">
+                <!-- <div class="bg-white p-3 rounded-lg shadow-md ml-2"> -->
+                <img class="ml-1 rounded-lg" src="../assets/images/CSR.png" />
+                <!-- </div> -->
+                <div class="w-5/6 mt-2 ml-10 text-sm text-left">
+                    <p>Jhon Doe</p>
+                    <p class="text-xs" style="color: #4D4847; font-weight: lighter;">lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                </div>
+            </div>
+            <textarea rows="4" class="focus:outline-none mt-4 p-4 resize-none w-5/6 block text-xs mx-auto rounded-lg"
+                placeholder="Type your message here"></textarea>
+        </div>
+    </div>
+    <!-- Chat Module Ends Here -->
+    <button id="back2Top" style="z-index: 3; bottom:10%; right:5%;" onclick="topFunction()"
+        class="focus:outline-none fixed rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
+
+
+    <!-- Navbar Starts Here!-->
+    <div style="border-color: #F1F2F6;" class="pt-5 w-5/6 lg:flex xl:flex container mx-auto justify-between">
+        <div class=" items-center flex justify-between lg:justify-start xl:justify-start">
+            <div onclick="window.location='../index.html'">
+                <img class="h-30 w-40" src="../assets/images/logo.png" />
+            </div>
+            <div id="mainNav" class="hidden lg:flex xl:flex">
+                <ul class="lg:flex xl:flex items-center">
+                    <li style="color:#0E142B" class="lg:ml-10 xl:ml-10  mr-5 ml-5 text-sm"><a
+                            href="./services.html">Services</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./ourwork.html">Portfolio</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./careers.html">Careers</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path style="color:#0E142B;" fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+
+
+        </div>
+        <div class="hidden lg:flex xl:flex items-center">
+            <img class="h-5 w-5" src="../assets/images/phone-call.png">
+            <p style="color: #0E142B;" class="text-sm ml-2">+92 042 35929454</p>
+            <button style="background-color: #0E142B;"
+                class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
+        </div>
+        <div id="navBar" style="background-color: rgba(14, 128, 161,0.8);"
+            class="p-2 w-5/6 mx-auto absolute hidden lg:hidden xl:hidden mt-5">
+            <ul class="lg:flex xl:flex items-center">
+                <li class="text-white text-sm py-2"><a href="./services.html">Services</a></li>
+                <li class="text-white text-sm py-2"><a href="./ourwork.html">Portfolio</a></li>
+                <li class="text-white text-sm py-2"><a href="./careers.html">Careers</a></li>
+                <li class="text-white text-sm py-2"><a href="./about-us.html">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Main Content Starts Here!-->
+    <div class="container mx-auto">
+        <div class="lg:flex w-5/6 xl:w-full mx-auto">
+            <!-- Left Col -->
+            <div class="mx-auto w-5/6 lg:w-2/6 mt-10">
+                <div class="flex border-b pb-2">
+                    <img src="../assets/images/design.png" class=" w-10 h-10" />
+                    <div class="ml-4">
+                        <p class="text-xs md:text-sm" style="color: #034078; font-family: 'Montserrat-Regular';">UI/UX
+                            Designer</p>
+                        <p class="text-xs md:text-sm" style="color:#4D4847; font-family:'Montserrat-Light'">
+                            Lahore,Pakistan Design</p>
+                        <p class="text-sm md:text-sm font-regular">Competitve Salary + Benefits</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-sm md:text-sm" style="color: #034078; font-family: 'Montserrat-Regular';">About Role:</p>
+                    <p style="opacity: 0.8;" class="text-xs md:text-sm leading-loose font-regular mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                        labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+                <div class="mt-4">
+                    <p class="text-sm md:text-sm" style="color: #034078; font-family: 'Montserrat-Regular';">Skills:</p>
+                    <div class=" lg:flex mt-4">
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Illustrator</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Photoshop</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Xd</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Wireframing</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Prototyping</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-xs md:text-sm mt-5" style="color: #034078; font-family: 'Montserrat-Regular';">Job Type:</p>
+                <p class="text-xs md:text-sm mt-5">Full Time</p>
+            </div>
+            <!-- Right Col -->
+            <div class="w-5/6 mx-auto shadow-xl right-0 rounded-lg bg-white mt-6 lg:w-3/6 xl:w-3/6">
+                <p style="color: #034078;" class="p-6 md:px-12 text-sm md:text-lg">Apply for the Post</p>
+                <form class="py-6 px-6 md:px-12" action="" method="post">
+                    <div class="block lg:flex xl:flex">
+                        <input
+                            class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 mb-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                            type="text"
+                            placeholder="Your name"
+                        />
+
+                    </div>
+                    <div class="block lg:flex xl:flex">
+                        <input
+                            class="bg-gray text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 mb-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                            type="text"
+                            placeholder="Your name"
+                        />
+
+                    </div>
+                    <div class="pt-2 lg:pt-4 xl:pt-4">
+                        <h2 class="my-2 lg:my-3 xl:my-3 text-sm md:text-lg text-gray">Optional</h2>
+                        <textarea
+                            class="bg-gray resize-none text-xs md:text-sm py-3 placeholder-gray-600 px-3 mr-0 my-2 lg:mr-2 xl:mr-2 rounded w-full focus:outline-none"
+                            rows="8"
+                            placeholder="Project detail"
+                        ></textarea>
+                    </div>
+                    <div class="my-2 p-3 rounded bg-gray">
+                        <div style="border-color: rgba(77, 72, 71, 0.7); " class="border-2 border-dashed w-full py-4 pl-3 rounded flex items-center">
+                            <img class="mr-5 h-10 md:h-auto" src="../assets/images/attachement.png" />
+                            <span class="ml-3 text-xxs md:text-xs text-gray-500">DROP YOUR ATTATCHMENTS HERE</span>
+                        </div>
+                    </div>
+                    <button class="w-full semiBold rounded-full bg-black py-2 md:py-3 mt-2 lg:mt-6 xl:mt-6 text-white text-xs md:text-base font-bold focus:outline-none">
+                        Submit
+                    </button>
+                    <p class="mt-6 text-center text-xs md:text-sm text-orange">or contact us at <span class="font-bold">contact@kryptomind.com</span></p>
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Starts Here! -->
+        <div class="md:flex justify-between pt-20 pb-20 w-5/6 mx-auto">
+            <!--Footer Links Data Row-->
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">KryptoMind</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./about-us.html">About Us</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./ourwork.html">Portfolio</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Services</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Block Chain</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Digital Industry</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">IT Security</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Consulting</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Contact</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Contact Us</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Consult</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Social</p>
+                <ul class="text-white mt-2 flex">
+                    <img src="../assets/images/linkedin-6.png" class="ml-2">
+                    <img src="../assets/images/facebook-3.png" class="ml-2">
+                    <img src="../assets/images/twitter-6.png" class="ml-2">
+                    <img src="../assets/images/google-plus-3.png" class="ml-2">
+                </ul>
+            </div>
+
+        </div>
+        <div style="border-color: #0E142B;"
+            class="md:flex lg:flex xl:flex items-center justify-between border-t mb-5 pt-5 w-5/6 mx-auto">
+            <img src="../assets/images/logo.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
+            <p
+                class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-linkBlue">
+                © 2020 KryptoMind. All Rights Are Reserved</p>
+        </div>
+
+</body>
+
+</html>
