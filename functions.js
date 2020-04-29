@@ -40,3 +40,11 @@ function toggleChat (){
     y.style.display = "none";
   }
 }
+function openDetailModal (){
+   var x = document.getElementById("detailModal");
+      x.style.display = "block";
+}
+function closeDetailModal () {
+  var x = document.getElementById("detailModal");
+  x.style.display = "none";
+}

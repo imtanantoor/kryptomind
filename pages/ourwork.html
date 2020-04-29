@@ -1,77 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
     <script src="../functions.js"></script>
     <title>Kryptomind | Our Work</title>
 </head>
+
 <body onscroll="scrollFunction()" class="bg-lightGray">
-    <!-- Chat Module Starts Here! -->
-  <button onclick="toggleChat()" id="chatButton" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #033058; position: fixed;" class="focus:outline-none flex bottom-0">
-    <img src="../assets/images/chatIcon.png" class="p-3"/>
-    <p style="background-color: #034078; border-top-right-radius:5px;" class="block text-white ml-5 py-4 text-sm p-3">Click Here To Chat</p>
-</button>
-<div id="chatContainer" style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #034078; position: fixed;" class="focus:outline-none shadow-lg bottom-0">
-<div class="py-3 flex mx-auto justify-between w-5/6 text-center items-center px-2">
-  <p class="text-white-50 md:ml-20 text-xs md:text-sm">How I may help you?</p>
-  <div class="flex">
-    <button class="h-10 focus:outline-none">
-      <img src="../assets/images/chatArrow.png" class="mr-2" >
-    </button>
-    <button onclick="toggleChat()" class="h-10 focus:outline-none">
-      <img src="../assets/images/chatMinimize.png" class="h-1 w-4">
-    </button>
-  </div>
-</div>
-<!-- Chat Box Body -->
-<div  class="pb-4" style="background-color: #F1F2F6;">
-    <div class="absolute bg-white rounded-lg flex ml-2 shadow-md">
-      <img  style="margin-top:-1.2rem; height: 4.5rem;" src="../assets/images/ChatLogo.png" class="bg-white p-2 rounded-lg"/>
-    </div>
-    <div class="w-full border-b pb-4 bg-white shadow-sm">
-      <div class="w-5/6 mx-auto">
-        <div class="w-5/6 pl-10 ml-10 md:ml-5 xl:ml-6 mx-auto">
-          <p>Kryptomind Support</p>
-          <p style="color: #F19212; font-family: Montserrat-Medium;" class="text-xs mt-1">24/7 Support</p>
+    <div style="background-color: rgba(241,242,246,0.5); z-index: 5;"
+        id="detailModal" class="fixed top-0 mt-5 bottom-0 left-0 right-0 w-full h-screen">
+        <div style="width: 500px; border-top-left-radius: 1rem; border-top-right-radius: 1rem;" class="carousel relative shadow-2xl bg-white mx-auto">
+            <div class="carousel-inner relative overflow-hidden ">
+                <button onclick="closeDetailModal()" style="color: #4D4847;" class="focus:outline-none text-xl absolute right-0 mr-5 mt-5">X</button>
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                    checked="checked">
+                <div class="carousel-item absolute opacity-0" style="height:30vh;">
+                    <!-- <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div> -->
+                    <img src="../assets/images/07.png" class="sliderImg" style="width:500px">
+                </div>
+                <label for="carousel-3"
+                    class="prev control-1 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2"
+                    class="next control-1 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-white hover:text-white bg-blue-700 hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0" style="height:30vh;">
+                    <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div>
+                </div>
+                <label for="carousel-1"
+                    class="prev control-2 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3"
+                    class="next control-2 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-white hover:text-white bg-blue-700 hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0" style="height:30vh;">
+                    <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+                </div>
+                <label for="carousel-2"
+                    class="prev control-3 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1"
+                    class="next control-3 w-10 h-10 absolute cursor-pointer hidden text-3xl font-bold text-white hover:text-white bg-blue-700 hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!-- Add additional indicators for each slide-->
+                <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                        <label for="carousel-1"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-2"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-3"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    </li>
+                </ol>
+
+            </div>
+            <div class="bg-lightGray px-10 pb-10 shadow-lg mx-auto">
+                <div class="flex items-center">
+                    <p style="color: #034078;" class="md:text-base py-5">Union Bank</p>
+                    <button class="focus:outline-none">
+                        <img src="../assets/images/linkIcon.png" class="h-4 ml-5">
+                    </button>
+                </div>
+                <div>
+                    <p style="color: #034078;" class="md:text-base pb-2">Overview</p>
+                    <p style="color: #4D4847; font-family: 'Montserrat-Regular';" class="text-sm leading-6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        We are a team of passionate professionals & we are always on the lookout for exciting talents to
+                        join our team. If you think you are as passionate as us about changing the world with cutting
+                        edge technologies, contact us and we will be happy to onboard you in our team.</p>
+                </div>
+                <div class="mt-5">
+                    <p style="color: #034078;" class="md:text-base pb-2">Platform</p>
+                    <div class="flex items-center">
+                        <img class = "h-7" src="../assets/images/android.png">
+                        <img class="ml-2 h-4" src="../assets/images/company.png">
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <p style="color: #034078;" class="md:text-base pb-2">Technologies</p>
+                    <div class="flex">
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">React</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">Android</p>
+                        </div>
+                        <div style="background-color: rgba(241,146,18,0.3);" class="mt-2 lg:mt-0 p-2 rounded mr-2">
+                            <p class="text-xs" style="color:#F19212">iOS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <p style="color: #034078; font-family: 'Montserrat-Regular';" class="md:text-base pb-2">Do you have similar project idea?</p>
+                    <button class="rounded-full shadow-lg text-xs text-white md:text-xs lg:text-xs xl:text-xs font-bold focus:outline-none uppercase font-bold py-2 px-5 " style="background-color: #F19212;">get in touch</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Customer Row -->
-    <div class="flex px-2 border-b items-center bg-white pb-4 shadow-sm">
-      <div class="bg-white p-3 rounded-lg shadow-md ml-2">
-        <img src="../assets/images/chatCustomerIcon.png"/>
-      </div>
-      <div class="w-5/6 pl-1 md:pl-0 ml-10 mt-2 text-sm text-left">
-        <p  style="font-family: Montserrat-Medium; color: #F19212;">You</p>
-        <p class="text-xs" style="color: #4D4847; font-weight: lighter;">Consetetur sadipscing elitr, sed diam?</p>
-      </div>
+    <!-- Chat Module Starts Here! -->
+    <button onclick="toggleChat()" id="chatButton"
+        style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #033058; position: fixed;"
+        class="focus:outline-none flex bottom-0">
+        <img src="../assets/images/chatIcon.png" class="p-3" />
+        <p style="background-color: #034078; border-top-right-radius:5px;"
+            class="block text-white ml-5 py-4 text-sm p-3">Click Here To Chat</p>
+    </button>
+    <div id="chatContainer"
+        style="z-index: 3; right:15%; border-top-left-radius:5px; border-top-right-radius:5px;background-color: #034078; position: fixed;"
+        class="focus:outline-none shadow-lg bottom-0">
+        <div class="py-3 flex mx-auto justify-between w-5/6 text-center items-center px-2">
+            <p class="text-white-50 md:ml-20 text-xs md:text-sm">How I may help you?</p>
+            <div class="flex">
+                <button class="h-10 focus:outline-none">
+                    <img src="../assets/images/chatArrow.png" class="mr-2">
+                </button>
+                <button onclick="toggleChat()" class="h-10 focus:outline-none">
+                    <img src="../assets/images/chatMinimize.png" class="h-1 w-4">
+                </button>
+            </div>
+        </div>
+        <!-- Chat Box Body -->
+        <div class="pb-4" style="background-color: #F1F2F6;">
+            <div class="absolute bg-white rounded-lg flex ml-2 shadow-md">
+                <img style="margin-top:-1.2rem; height: 4.5rem;" src="../assets/images/ChatLogo.png"
+                    class="bg-white p-2 rounded-lg" />
+            </div>
+            <div class="w-full border-b pb-4 bg-white shadow-sm">
+                <div class="w-5/6 mx-auto">
+                    <div class="w-5/6 pl-10 ml-10 md:ml-5 xl:ml-6 mx-auto">
+                        <p>Kryptomind Support</p>
+                        <p style="color: #F19212; font-family: Montserrat-Medium;" class="text-xs mt-1">24/7 Support</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Customer Row -->
+            <div class="flex px-2 border-b items-center bg-white pb-4 shadow-sm">
+                <div class="bg-white p-3 rounded-lg shadow-md ml-2">
+                    <img src="../assets/images/chatCustomerIcon.png" />
+                </div>
+                <div class="w-5/6 pl-1 md:pl-0 ml-10 mt-2 text-sm text-left">
+                    <p style="font-family: Montserrat-Medium; color: #F19212;">You</p>
+                    <p class="text-xs" style="color: #4D4847; font-weight: lighter;">Consetetur sadipscing elitr, sed
+                        diam?</p>
+                </div>
+            </div>
+            <!-- CSR Row -->
+            <div class="flex px-2 items-center bg-white pb-6 shadow-sm">
+                <!-- <div class="bg-white p-3 rounded-lg shadow-md ml-2"> -->
+                <img class="ml-1 rounded-lg" src="../assets/images/CSR.png" />
+                <!-- </div> -->
+                <div class="w-5/6 mt-2 ml-10 text-sm text-left">
+                    <p>Jhon Doe</p>
+                    <p class="text-xs" style="color: #4D4847; font-weight: lighter;">lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                </div>
+            </div>
+            <textarea rows="4" class="focus:outline-none mt-4 p-4 resize-none w-5/6 block text-xs mx-auto rounded-lg"
+                placeholder="Type your message here"></textarea>
+        </div>
     </div>
-    <!-- CSR Row -->
-    <div class="flex px-2 items-center bg-white pb-6 shadow-sm">
-      <!-- <div class="bg-white p-3 rounded-lg shadow-md ml-2"> -->
-        <img class="ml-1 rounded-lg" src="../assets/images/CSR.png"/>
-      <!-- </div> -->
-      <div class="w-5/6 mt-2 ml-10 text-sm text-left">
-        <p>Jhon Doe</p>
-        <p class="text-xs" style="color: #4D4847; font-weight: lighter;">lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-      </div>
-    </div>
-    <textarea rows="4" class="focus:outline-none mt-4 p-4 resize-none w-5/6 block text-xs mx-auto rounded-lg" placeholder="Type your message here"></textarea>
-</div>
-</div>
-<!-- Chat Module Ends Here -->
-<button id="back2Top" style="z-index: 3; bottom:10%; right:5%;" onclick="topFunction()" class="focus:outline-none fixed rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
-  
+    <!-- Chat Module Ends Here -->
+    <button id="back2Top" style="z-index: 3; bottom:10%; right:5%;" onclick="topFunction()"
+        class="focus:outline-none fixed rounded-full bg-darkBlue text-white p-2 px-6 text-4xl">&uarr;</button>
+
 
     <!-- Navbar Starts Here!-->
     <div style="border-color: #F1F2F6;" class="pt-5 w-5/6 lg:flex xl:flex container mx-auto justify-between">
@@ -80,403 +182,531 @@
                 <img class="h-30 w-40" src="../assets/images/logo.png" />
             </div>
             <div id="mainNav" class="hidden lg:flex xl:flex">
-              <ul class="lg:flex xl:flex items-center">
-                  <li style="color:#0E142B" class="lg:ml-10 xl:ml-10  mr-5 ml-5 text-sm"><a href="./services.html">Services</a></li>
-                  <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./ourwork.html">Portfolio</a></li>
-                  <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./careers.html">Careers</a></li>
-                  <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./about-us.html">About Us</a></li>
-              </ul>
+                <ul class="lg:flex xl:flex items-center">
+                    <li style="color:#0E142B" class="lg:ml-10 xl:ml-10  mr-5 ml-5 text-sm"><a
+                            href="./services.html">Services</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./ourwork.html">Portfolio</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./careers.html">Careers</a></li>
+                    <li style="color:#0E142B" class="text mr-5 ml-5 text-sm"><a href="./about-us.html">About Us</a></li>
+                </ul>
             </div>
             <div>
-              <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
-                  <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                      <path  style="color:#0E142B;" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-                  </svg>
-              </button>
-          </div>
+                <button id="hamburger" class="lg:hidden xl:hidden" onclick="toggleHeader()">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path style="color:#0E142B;" fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
 
-          
+
         </div>
-         <div class="hidden lg:flex xl:flex items-center">
+        <div class="hidden lg:flex xl:flex items-center">
             <img class="h-5 w-5" src="../assets/images/phone-call.png">
             <p style="color: #0E142B;" class="text-sm ml-2">+92 042 35929454</p>
-            <button style="background-color: #0E142B;" class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
+            <button style="background-color: #0E142B;"
+                class="rounded-full ml-5 shadow-lg py-2 px-8 text-white text-xs ml-2 uppercase">Consult</button>
         </div>
-        <div id="navBar" style="background-color: rgba(14, 128, 161,0.8);" class="p-2 w-5/6 mx-auto absolute hidden lg:hidden xl:hidden mt-5">
-          <ul class="lg:flex xl:flex items-center">
-              <li class="text-white text-sm py-2"><a href="./services.html">Services</a></li>
-              <li class="text-white text-sm py-2"><a href="./ourwork.html">Portfolio</a></li>
-              <li class="text-white text-sm py-2"><a href="./careers.html">Careers</a></li>
-              <li class="text-white text-sm py-2"><a href="./about-us.html">About Us</a></li>
-          </ul>
+        <div id="navBar" style="background-color: rgba(14, 128, 161,0.8);"
+            class="p-2 w-5/6 mx-auto absolute hidden lg:hidden xl:hidden mt-5">
+            <ul class="lg:flex xl:flex items-center">
+                <li class="text-white text-sm py-2"><a href="./services.html">Services</a></li>
+                <li class="text-white text-sm py-2"><a href="./ourwork.html">Portfolio</a></li>
+                <li class="text-white text-sm py-2"><a href="./careers.html">Careers</a></li>
+                <li class="text-white text-sm py-2"><a href="./about-us.html">About Us</a></li>
+            </ul>
         </div>
     </div>
     <!--Main Content Starts Here!-->
     <div class="container mx-auto">
         <div class="w-4/6 mx-auto mt-20">
             <p style="color: #0E142B;" class="text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center ">Our Work</p>
-            <p style="color: #0E142B;" class="text-sm text-center mt-5 ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p style="color: #0E142B;" class="text-sm text-center mt-5 ">Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                diam voluptua.</p>
         </div>
-    <!-- Filter Search Section-->
-            <div class="flex w-5/6 xl:w-full mx-auto mt-20 pb-10 items-center">
-                <div class="md:w-40 lg:w-40 xl:w-40 w-2/6 mr-5">
-                    <label style="color: #034078; font-family: 'Montserrat-SemiBold';" class="block tracking-wide mb-2 text-md" for="grid-state">
+        <!-- Filter Search Section-->
+        <div class="flex w-5/6 xl:w-full mx-auto mt-20 pb-10 items-center">
+            <div class="md:w-40 lg:w-40 xl:w-40 w-2/6 mr-5">
+                <label style="color: #034078; font-family: 'Montserrat-SemiBold';"
+                    class="block tracking-wide mb-2 text-md" for="grid-state">
                     Technology
-                    </label>
-                    <div class="relative">
-                    <select  class="block text-xs appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-2  rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                </label>
+                <div class="relative">
+                    <select
+                        class="block text-xs appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-2  rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state">
                         <option>All</option>
                         <option>Missouri</option>
                         <option>Texas</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
                     </div>
                 </div>
-                <div class="md:w-40 lg:w-40 xl:w-40 w-2/6">
-                    <label style="color: #034078; font-family: 'Montserrat-SemiBold';" class="block tracking-wide mb-2 text-md" for="grid-state">
+            </div>
+            <div class="md:w-40 lg:w-40 xl:w-40 w-2/6">
+                <label style="color: #034078; font-family: 'Montserrat-SemiBold';"
+                    class="block tracking-wide mb-2 text-md" for="grid-state">
                     Category
-                    </label>
-                    <div class="relative">
-                    <select  class="block text-xs appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-2  rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                </label>
+                <div class="relative">
+                    <select
+                        class="block text-xs appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-2  rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state">
                         <option>All</option>
                         <option>Missouri</option>
                         <option>Texas</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
                     </div>
-                    </div>
-                </div>
-                <button class="focus:outline-none text-xs md:text-sm lg:text-sm xl:text-sm md:ml-5 lg:ml-5 xl:ml-5 ml-3 mt-8" style="color: #0E142B; font-family: Montserrat-SemiBold;">Clear All</button>
-            </div>
-    <!-- Card Row 1-->
-    <div class="w-5/6 mx-auto md-w-full xl:w-full border-t-2 pt-10 mx-auto">
-        <div class="w-full block lg:flex xl:flex">
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div id="projectCard" class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mt-0 mx-auto" src="../assets//images/07.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Union Bank</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-                <div id="projectCard" class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/02.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Taskly</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/imac.png" class="h-4 w-4">
-                                <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
                 </div>
             </div>
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/04.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/internet.png" class="h-4 w-4">
-                                <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-                <div class="w-full mb-8 shadow-lg relative projectHover bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/06.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Kashee</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-            </div>
+            <button
+                class="focus:outline-none text-xs md:text-sm lg:text-sm xl:text-sm md:ml-5 lg:ml-5 xl:ml-5 ml-3 mt-8"
+                style="color: #0E142B; font-family: Montserrat-SemiBold;">Clear All</button>
         </div>
-    </div>
-    <!-- Card Row 2 -->
-    <div class="w-5/6 mx-auto md-w-full xl:w-full mx-auto">
-        <div class="w-full block lg:flex xl:flex">
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div id="projectCard" class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mt-0 mx-auto" src="../assets/images/03.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Inbox Guard</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
+        <!-- Card Row 1-->
+        <div class="w-5/6 mx-auto md-w-full xl:w-full border-t-2 pt-10 mx-auto">
+            <div class="w-full block lg:flex xl:flex">
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div id="projectCard"
+                        class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mt-0 mx-auto" src="../assets//images/07.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Union Bank</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-                <div class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/05.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Taskly</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="openDetailModal()"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
                         </div>
                     </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- CustomHover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div>
-                </div>
-            </div>
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/04.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/internet.png" class="h-4 w-4">
-                                <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                    <div id="projectCard"
+                        class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/02.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Taskly</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/imac.png" class="h-4 w-4">
+                                    <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-                <div class="relative projectHover w-full mb-8 shadow-lg  bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/08.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Workout Mate</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
                         </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Card Row 3 -->
-    <div class="w-5/6 mx-auto md-w-full xl:w-full mx-auto">
-        <div class="w-full block lg:flex xl:flex">
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div id="projectCard" class="relative projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mt-0 mx-auto" src="../assets//images/07.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Union Bank</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
                         </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- Custom Hover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div> 
-                </div>
-                <div class="w-full mb-8 relative projectHover shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/02.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Taskly</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/imac.png" class="h-4 w-4">
-                                <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- CustomHover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
                     </div>
                 </div>
-            </div>
-            <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
-                <div class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/04.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/internet.png" class="h-4 w-4">
-                                <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div
+                        class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/04.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/internet.png" class="h-4 w-4">
+                                    <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- CustomHover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
-                    </div>
-                </div>
-                <div class="w-full relative projectHover mb-8 shadow-lg  bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
-                    <div class="w-full border-b border-gray-300">
-                        <img class="w-full mx-auto" src="../assets//images/06.png" />
-                        <div class="flex px-5 justify-between">
-                            <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';" class="text-base my-4 text-center">Kashee</p>
-                            <div class="flex items-center">
-                                <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
-                                <img src="../assets/images/company.png" class="h-5 w-4">
-                            </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
                         </div>
                     </div>
-                    <div class="px-5">
-                        <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">Overview</p>
-                        <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
-                    </div>
-                    <!-- CustomHover -->
-                    <div id="customHover" class="onhover w-full  rounded-lg absolute top-0"> 
-                        <button onclick="alert('Pressed')" class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none "><p style="background-color:#0E142B; font-family: 'Montserrat-Bold';" class="rounded-full py-3 px-10 text-white">View Detail</p></button>
+                    <div
+                        class="w-full mb-8 shadow-lg relative projectHover bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/06.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Kashee</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Card Row 2 -->
+        <div class="w-5/6 mx-auto md-w-full xl:w-full mx-auto">
+            <div class="w-full block lg:flex xl:flex">
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div id="projectCard"
+                        class="projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mt-0 mx-auto" src="../assets/images/03.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Inbox Guard</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/05.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Taskly</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- CustomHover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div
+                        class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/04.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/internet.png" class="h-4 w-4">
+                                    <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="relative projectHover w-full mb-8 shadow-lg  bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/08.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Workout Mate</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover  w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Row 3 -->
+        <div class="w-5/6 mx-auto md-w-full xl:w-full mx-auto">
+            <div class="w-full block lg:flex xl:flex">
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div id="projectCard"
+                        class="relative projectHover w-full mb-8 relative shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mt-0 mx-auto" src="../assets//images/07.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Union Bank</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- Custom Hover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full mb-8 relative projectHover shadow-lg bg-white rounded-lg sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:ml-2 lg:mr-2 xl:ml-2 xl:mr-2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/02.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Taskly</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/imac.png" class="h-4 w-4">
+                                    <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- CustomHover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block md:flex lg:flex xl:flex w-full lg:w-1/2 xl:w-1/2">
+                    <div
+                        class="w-full relative projectHover mb-8 shadow-lg bg-white rounded-lg mr-0 ml-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/04.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Nike Sportswear Icon Clash</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/internet.png" class="h-4 w-4">
+                                    <!-- <img src="/assets/images/company.png" class="h-5 w-4"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- CustomHover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full relative projectHover mb-8 shadow-lg  bg-white rounded-lg ml-0 mr-0 pb-12 md:ml-2 md:mr-2 lg:mr-2 lg:ml-2 xl:mr-2 xl:ml-2 lg:w-1/2 xl:w-1/2">
+                        <div class="w-full border-b border-gray-300">
+                            <img class="w-full mx-auto" src="../assets//images/06.png" />
+                            <div class="flex px-5 justify-between">
+                                <p style="color: rgba(77,72,71,0.8); font-family: 'Montserrat-Medium';"
+                                    class="text-base my-4 text-center">Kashee</p>
+                                <div class="flex items-center">
+                                    <img src="../assets/images/android.png" class="h-6 w-4 mr-2">
+                                    <img src="../assets/images/company.png" class="h-5 w-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-5">
+                            <p style="color: rgba(77,72,71,0.4); font-family: 'Montserrat-Medium';" class="mt-2">
+                                Overview</p>
+                            <p style="color: rgba(77,72,71,0.9);" class="mt-2">Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt </p>
+                        </div>
+                        <!-- CustomHover -->
+                        <div id="customHover" class="onhover w-full  rounded-lg absolute top-0">
+                            <button onclick="alert('Pressed')"
+                                class="absolute top-0 right-0 bottom-0 left-0 m-auto block focus:outline-none ">
+                                <p style="background-color:#0E142B; font-family: 'Montserrat-Bold';"
+                                    class="rounded-full py-3 px-10 text-white">View Detail</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <!-- Load more Button & Contact us Banner  -->
-    <button style="border-color: #034078; color: #034078;" class="mt-10 border rounded-full px-8 py-2 text-base block mx-auto focus:outline-none">Load More</button>
-    <div class="w-5/6 mx-auto md:w-full lg:w-full xl:w-full pb-20 pt-10 mt-10 lg" style="background-color: rgba(241,146,18,0.2); border-radius: 1rem;">
-        <div class="w-5/6 mx-auto">
-            <p style="color: #F19212; font-family: 'Montserrat-Medium';" class="mt-4 text-xl md:text-3xl lg:text-3xl xl:text-3xl text-center">Contact Us</p>
-            <p style="color: #0E142B; font-family: 'Montserrat-Medium';" class="mt-4 text-2xl md:text-5xl lg:text-5xl xl:text-5xl text-center">Let's create perfect products together.</p>
-            <p style="color:rgba(77,72,71,0.8);" class="mt-5 text-xs md:text-base lg:text-base xl:text-base text-center leading-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
-                gubergren.
-            </p>
-            <button onclick="window.location='./proposal_request.html'" class="block mx-auto py-3 px-10 focus:outline-none text-white text-xs shadow-xl md:text-base lg:text-base xl:text-base mt-10 rounded-full" style="background-color: #F19212; font-family: 'Montserrat-Bold';">Request a Proposal</button>
-        </div>
-    </div>
-
-
-    <!-- Footer Starts Here! -->
-    <div  class="md:flex justify-between pt-20 pb-20 w-5/6 mx-auto">
-        <!--Footer Links Data Row-->
-        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
-          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">KryptoMind</p>
-          <ul class="text-white mt-2">
-            <li class="mt-2 text-sm text-linkBlue"><a href="./about-us.html">About Us</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="./ourwork.html">Portfolio</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="./careers.html">Careers</a></li>
-          </ul>
-        </div>
-        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
-          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Services</p>
-          <ul class="text-white mt-2">
-            <li class="mt-2 text-sm text-linkBlue"><a href="#">Block Chain</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="#">Digital Industry</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="#">IT Security</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="#">Consulting</a></li>
-          </ul>
-        </div>
-        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
-          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Contact</p>
-          <ul class="text-white mt-2">
-            <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Contact Us</a></li>
-            <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Consult</a></li>
-          </ul>
-        </div>
-        <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
-          <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Social</p>
-          <ul class="text-white mt-2 flex">
-            <img src="../assets/images/linkedin-6.png" class="ml-2" >
-            <img src="../assets/images/facebook-3.png" class="ml-2" >
-            <img src="../assets/images/twitter-6.png" class="ml-2" >
-            <img src="../assets/images/google-plus-3.png" class="ml-2" >
-          </ul>
+        <!-- Load more Button & Contact us Banner  -->
+        <button style="border-color: #034078; color: #034078;"
+            class="mt-10 border rounded-full px-8 py-2 text-base block mx-auto focus:outline-none">Load More</button>
+        <div class="w-5/6 mx-auto md:w-full lg:w-full xl:w-full pb-20 pt-10 mt-10 lg"
+            style="background-color: rgba(241,146,18,0.2); border-radius: 1rem;">
+            <div class="w-5/6 mx-auto">
+                <p style="color: #F19212; font-family: 'Montserrat-Medium';"
+                    class="mt-4 text-xl md:text-3xl lg:text-3xl xl:text-3xl text-center">Contact Us</p>
+                <p style="color: #0E142B; font-family: 'Montserrat-Medium';"
+                    class="mt-4 text-2xl md:text-5xl lg:text-5xl xl:text-5xl text-center">Let's create perfect products
+                    together.</p>
+                <p style="color:rgba(77,72,71,0.8);"
+                    class="mt-5 text-xs md:text-base lg:text-base xl:text-base text-center leading-8">Lorem ipsum dolor
+                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd
+                    gubergren.
+                </p>
+                <button onclick="window.location='./proposal_request.html'"
+                    class="block mx-auto py-3 px-10 focus:outline-none text-white text-xs shadow-xl md:text-base lg:text-base xl:text-base mt-10 rounded-full"
+                    style="background-color: #F19212; font-family: 'Montserrat-Bold';">Request a Proposal</button>
+            </div>
         </div>
 
-      </div>
-      <div style="border-color: #0E142B;" class="md:flex lg:flex xl:flex items-center justify-between border-t mb-5 pt-5 w-5/6 mx-auto">
-        <img src="../assets/images/logo.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
-        <p class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-linkBlue">© 2020 KryptoMind. All Rights Are Reserved</p>
-      </div>
+
+        <!-- Footer Starts Here! -->
+        <div class="md:flex justify-between pt-20 pb-20 w-5/6 mx-auto">
+            <!--Footer Links Data Row-->
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">KryptoMind</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./about-us.html">About Us</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./ourwork.html">Portfolio</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Services</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Block Chain</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Digital Industry</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">IT Security</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="#">Consulting</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Contact</p>
+                <ul class="text-white mt-2">
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Contact Us</a></li>
+                    <li class="mt-2 text-sm text-linkBlue"><a href="./contact-us.html">Consult</a></li>
+                </ul>
+            </div>
+            <div class="w-5/6 mt-5  md:mx-0 lg:mx-0 xl:mx-0 md:mt-0 lg:mt-0 xl:mt-0 md:w-1/6 lg:w-1/6 xl:w-1/6">
+                <p style="border-color: #0E142B;" class="text-xl text-linkBlue border-b pb-2">Social</p>
+                <ul class="text-white mt-2 flex">
+                    <img src="../assets/images/linkedin-6.png" class="ml-2">
+                    <img src="../assets/images/facebook-3.png" class="ml-2">
+                    <img src="../assets/images/twitter-6.png" class="ml-2">
+                    <img src="../assets/images/google-plus-3.png" class="ml-2">
+                </ul>
+            </div>
+
+        </div>
+        <div style="border-color: #0E142B;"
+            class="md:flex lg:flex xl:flex items-center justify-between border-t mb-5 pt-5 w-5/6 mx-auto">
+            <img src="../assets/images/logo.png" class="mx-auto md:mx-0 lg:mx-0 xl:mx-0">
+            <p
+                class="text-sm md:text-left lg:text-left xl:text-left text-center mt-5 md:mt-0 lg:mt-0 xl:mt-0 md:text-lg lg:text-lg xl:text-lg text-linkBlue">
+                © 2020 KryptoMind. All Rights Are Reserved</p>
+        </div>
 
 </body>
+
 </html>
